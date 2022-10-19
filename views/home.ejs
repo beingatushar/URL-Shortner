@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>URL Shrinker Home</h1>
+    <form action="/" method="post">
+      <label for="url">URL</label>
+      <input type="text" id="url" name="url" autocomplete="off" />
+      <label for="shortURL">shortURL</label>
+      <input type="text" id="shortURL" name="shortURL" autocomplete="off" />
+      <button>Submit</button>
+    </form>
+    <% if(allURL!=0){ %>
+    <table>
+      <thead>
+        <tr>
+          <td>shortURL</td>
+          <td>Clicks</td>
+          <td>Visit</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let data of allURL){ %>
+        <tr>
+          <td><%=data.shortURL %></td>
+          <td><%=data.clicks %></td>
+          <td>
+            <a href="/<%=data.shortURL%>">Click</a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <% } %>
+  </body>
+</html>
