@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const ShortUrl = require("./models/shortUrl");
+const ShortUrl = require("./models/shortUrl.js");
 const PORT = process.env.PORT || 3000;
 const methodOverride = require("method-override");
 mongoose
