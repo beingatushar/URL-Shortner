@@ -11,10 +11,13 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/url-shortner", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://vercel-admin-user:asN1UpR73MRMesEl@shrinkify.d6lyhwq.mongodb.net/?retryWrites=true&w=majority",
+    {
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("DATABASE CONNECTED");
   })
