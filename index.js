@@ -8,8 +8,8 @@ mongoose
   .connect(
     "mongodb+srv://vercel-admin-user:asN1UpR73MRMesEl@shrinkify.d6lyhwq.mongodb.net/?retryWrites=true&w=majority",
     {
-      // useNewUrlParser: true,
-      // useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
     }
   )
   .then(() => {
