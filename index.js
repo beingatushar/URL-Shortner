@@ -23,6 +23,7 @@ mongoose
 app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
 app.get("/", async (req, res) => {
   const shortUrls = await ShortUrl.find();
